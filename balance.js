@@ -18,9 +18,9 @@ document.getElementById('noakhali-submit').addEventListener('click', function (e
     
     const noakhaliPresentBalanceIs = getTextFieldValueById('balance-noakhali');
     const balanceAfterDonating = noakhaliInputAmount + noakhaliPresentBalanceIs;
-    document.getElementById('balance-noakhali').innerText = balanceAfterDonating.toLocaleString();
+    document.getElementById('balance-noakhali').innerText = balanceAfterDonating.toLocaleString('bn-bd');
     const newmainbalance = mainbalance - noakhaliInputAmount;
-    document.getElementById('main-balance').innerText = newmainbalance.toLocaleString();
+    document.getElementById('main-balance').innerText = newmainbalance.toLocaleString('bn-bd');
     document.getElementById('donate-noakhali-input').value = '';
     document.getElementById('my_modal_5').showModal();
     }
