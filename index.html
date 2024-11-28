@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4a26ad9b87.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <main>
+        <!-- Navbar Section starts -->
+        <div class="flex items-center justify-between px-3 py-2 bg-yellow-50/70 fixed top-0 left-0 w-full z-50 backdrop-blur-md">
+            <!-- Dropdown Starts  -->
+            <div class="dropdown sm:hidden">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h7" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li class="hover:bg-green-300 rounded-lg"><a>Blog</a></li>
+                  <li class="hover:bg-green-300 rounded-lg"><a>Donate</a></li>
+                  <li class="hover:bg-green-300 rounded-lg"><a>History</a></li>
+                </ul>
+              </div>
+              <!-- Dropdown ends -->
+            <button class=" btn hidden w-36 text-sm sm:font-bold sm:text-base sm:block bg-green-300 hover:bg-green-300">Blog</button>
+            <h1 class="text-center sm:text-4xl text-xs font-medium"><i class="fa-solid fa-circle-dollar-to-slot px-2 text-yellow-300"></i>Donate Bangladesh</h1>
+
+            <div class="flex items-center space-x-1 sm:font-bold text-sm">
+                <div id="main-balance" ><i class="fa-solid fa-coins text-yellow-300 px-3"></i>6,900</div>
+                <span>BDT</span>
+            </div>
+        </div>
+        <div class=" hidden sm:flex sm:items-center sm:justify-center sm:py-4 sm:gap-2 mt-16 fixed top-0 left-0 w-full z-50 bg-slate-100/60 backdrop-blur-lg">
+            <button class=" btn text-sm sm:font-bold">Donate</button>
+            <button class=" btn text-sm sm:font-bold">History</button> 
+            
+        </div>
+        <!-- Navbar Section ends -->
+
+        <!-- Cards Section starts -->
+         <!-- Card 1 start -->
+         <div class=" px-4 mt-20 sm:flex sm:items-center sm:justify-center sm:min-h-screen sm:mt-10">
+            <div class=" card lg:card-side bg-slate-50 shadow-2xl sm:w-5/6">
+                <figure class="w-auto">
+                  <img class="sm:h-96 sm:w-96 sm:mx-3 sm:my-4 sm:rounded-xl"
+                    src="./assets/devastating-floods-affect-the-lives-of-over-5-million-jaago-foundation-and-volunteer-for-bangladesh-launch-initiative-to-provide-relief-support-2-e1724932197660-1200x1116_1725885495_HFn_yVKxZ.webp"
+                    alt="Album" />
+                </figure>
+                <div class="card-body  sm:w-7">
+                    <!-- Donation Amount Starts -->
+                    <div class="flex items-center space-x-1 sm:font-bold text-sm bg-slate-100 shadow-xl rounded-xl w-36">
+                        <i class="fa-solid fa-coins text-yellow-300 px-3"></i><div id="balance-noakhali">21,000</div>
+                        <span>BDT</span>
+                    </div>
+                     <!-- Donation Amount Ends -->
+                    
+                  <h2 class="card-title">Donate for flood at Noakhali, Bangladesh</h2>
+                 
+                  <p class="">The people of Noakhali, Bangladesh, are facing devastating floods that have displaced thousands and caused widespread destruction. Your generous donation can provide critical relief, helping those in need with food, shelter, medical care, and essential supplies. Every contribution, no matter how small, can make a significant impact in rebuilding lives and supporting affected communities. Join us in making a difference and bring hope to those in Noakhali during this challenging time.</p>
+                  <!-- Input Field Starts -->
+                  <input type="text" placeholder="Write Donation Amount" id="donate-noakhali-input" class="input input-bordered  sm:w-[120] rounded-lg" />
+                  <!-- Input Field Ends -->
+                
+                  <div class="card-actions justify-center">
+                    <button id="noakhali-submit" class="btn btn-primary bg-green-500 text-black hover:bg-green-400 border-none sm:w-1/6">Donate Now</button>
+                  </div>
+                </div>
+              </div>
+         </div>
+         <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box  sm:h-90 sm:w-90">
+            <h3 class="text-lg font-bold">Thank you! Donation Successful</h3>
+            <br>
+            <p>For checking the transaction please click History</p>
+            <p class="py-4">Press ESC key or click the button below</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Ok</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+         <!-- Card 2 -->
+         <div class=" px-4 mt-6 sm:flex sm:items-center sm:justify-center sm:min-h-screen sm:-mt-36">
+            <div class=" card lg:card-side bg-slate-50 shadow-2xl sm:w-5/6">
+                <figure class="w-auto">
+                  <img class="sm:h-96 sm:w-96 sm:mx-3 sm:my-4 sm:rounded-xl"
+                    src="./assets/Flood-Feni-AFP-aff3315d99f0172d80f7cb115784dfe9.webp"
+                    alt="Album" />
+                </figure>
+                <div class="card-body  sm:w-7">
+                    <!-- Donation Amount Starts -->
+                    <div class="flex items-center space-x-1 sm:font-bold text-sm bg-slate-100 shadow-xl rounded-xl w-36">
+                        <div><i class="fa-solid fa-coins text-yellow-300 px-3"></i>921,600</div>
+                        <span>BDT</span>
+                    </div>
+                     <!-- Donation Amount Ends -->
+                    
+                  <h2 class="card-title">Donate for Flood Relief in Fenni, Bangladesh</h2>
+                 
+                  <p class="">The people of Noakhali, Bangladesh, are facing devastating floods that have displaced thousands and caused widespread destruction. Your generous donation can provide critical relief, helping those in need with food, shelter, medical care, and essential supplies. Every contribution, no matter how small, can make a significant impact in rebuilding lives and supporting affected communities. Join us in making a difference and bring hope to those in Noakhali during this challenging time.</p>
+                  <!-- Input Field Starts -->
+                  <input type="text" placeholder="Write Donation Amount" class="input input-bordered  sm:w-[120] rounded-lg" />
+                  <!-- Input Field Ends -->
+                
+                  <div class="card-actions justify-center">
+                    <button class="btn btn-primary bg-green-500 text-black hover:bg-green-400 border-none sm:w-1/6">Donate Now</button>
+                  </div>
+                </div>
+              </div>
+         </div>
+         <!-- Card 3 -->
+         <div class=" px-4 mt-6 sm:flex sm:items-center sm:justify-center sm:min-h-screen sm:-mt-36">
+            <div class=" card lg:card-side bg-slate-50 shadow-2xl sm:w-5/6">
+                <figure class="w-auto">
+                  <img class="sm:h-96 sm:w-96 sm:mx-3 sm:my-4 sm:rounded-xl "
+                    src="./assets/who-emergency-lead-observes-diarrhea-treatment-at-feni-sadar-hospital.jpg"
+                    alt="Album" />
+                </figure>
+                <div class="card-body  sm:w-7">
+                    <!-- Donation Amount Starts -->
+                    <div class="flex items-center space-x-1 sm:font-bold text-sm bg-slate-100 shadow-xl rounded-xl w-36">
+                        <div><i class="fa-solid fa-coins text-yellow-300 px-3"></i>21,000</div>
+                        <span>BDT</span>
+                    </div>
+                     <!-- Donation Amount Ends -->
+                    
+                  <h2 class="card-title">Support with Medicines for flood at Noakhali, Bangladesh</h2>
+                 
+                  <p class="">The people of Noakhali, Bangladesh, are facing devastating floods that have displaced thousands and caused widespread destruction. Your generous donation can provide critical relief, helping those in need with food, shelter, medical care, and essential supplies. Every contribution, no matter how small, can make a significant impact in rebuilding lives and supporting affected communities. Join us in making a difference and bring hope to those in Noakhali during this challenging time.</p>
+                  <!-- Input Field Starts -->
+                  <input type="text" placeholder="Write Donation Amount" class="input input-bordered  sm:w-[120] rounded-lg" />
+                  <!-- Input Field Ends -->
+                
+                  <div class="card-actions justify-center">
+                    <button class="btn btn-primary bg-green-500 text-black hover:bg-green-400 border-none sm:w-1/6">Donate Now</button>
+                  </div>
+                </div>
+              </div>
+         </div>
+          
+          
+         <!-- Cards section ends -->
+    </main>
+    <script src="./balance.js"></script>
+    <script src="./sharedjs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+</body>
+</html>
