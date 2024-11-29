@@ -61,5 +61,38 @@ document.getElementById('fenni-button').addEventListener('click', function (even
     }
 })
 
+document.getElementById('med-button').addEventListener('click', function (event){
+    event.preventDefault();
+
+    const medinput = getInputValueById('med-input');
+    const medmain = getTextFieldValueById('main-balance');
+
+    // Condition Check
+    if(isNaN(medinput)){
+        alert('Only numbers are allowed!');
+    }
+    else if(medinput > medmain){
+        alert('Do not have sufficient balance!');
+    }
+    else if(medinput <=0){
+        alert('Negative or zero value is not allowed!');
+    }
+    else {
+
+        const medCurrentBalance = getTextFieldValueById('medicine-balance');
+        const medNewBalance = medCurrentBalance + medinput;
+        document.getElementById('medicine-balance').innerText = medNewBalance.toLocaleString();
+
+        const mainaccDecreasedBalance = medmain - medinput;
+        document.getElementById('main-balance').innerText = mainaccDecreasedBalance.toLocaleString();
+
+        document.getElementById('med-input').value = '';
+
+        document.getElementById('my_modal_7').showModal();
+ }
+
+
+})
+
 
 
