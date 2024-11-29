@@ -113,20 +113,36 @@
                 <div class="card-body  sm:w-7">
                     <!-- Donation Amount Starts -->
                     <div class="flex items-center space-x-1 sm:font-bold text-sm bg-slate-100 shadow-xl rounded-xl w-36">
-                        <div><i class="fa-solid fa-coins text-yellow-300 px-3"></i>921,600</div>
+                        <i class="fa-solid fa-coins text-yellow-300 px-3"></i>
+                        <div id="fenni-balance">921,600</div>
                         <span>BDT</span>
                     </div>
+                    <button class="btn hidden" onclick="my_modal_6.showModal()">open modal</button>
+                    <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
+                      <div class="modal-box sm:h-90 sm:w-90">
+                        <h3 class="text-lg font-bold">Thank you! Donation Successful</h3>
+                        <br>
+                        <p>For checking the transaction please click History</p>
+                        <p class="py-4">Press ESC key or click the button below</p>
+                        <div class="modal-action">
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Ok</button>
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>
                      <!-- Donation Amount Ends -->
                     
                   <h2 class="card-title">Donate for Flood Relief in Fenni, Bangladesh</h2>
                  
                   <p class="">The people of Noakhali, Bangladesh, are facing devastating floods that have displaced thousands and caused widespread destruction. Your generous donation can provide critical relief, helping those in need with food, shelter, medical care, and essential supplies. Every contribution, no matter how small, can make a significant impact in rebuilding lives and supporting affected communities. Join us in making a difference and bring hope to those in Noakhali during this challenging time.</p>
                   <!-- Input Field Starts -->
-                  <input type="text" placeholder="Write Donation Amount" class="input input-bordered  sm:w-[120] rounded-lg" />
+                  <input id="fenni-input" type="text" placeholder="Write Donation Amount" class="input input-bordered  sm:w-[120] rounded-lg" />
                   <!-- Input Field Ends -->
                 
                   <div class="card-actions justify-center">
-                    <button class="btn btn-primary bg-green-500 text-black hover:bg-green-400 border-none sm:w-1/6">Donate Now</button>
+                    <button id="fenni-button" class="btn btn-primary bg-green-500 text-black hover:bg-green-400 border-none sm:w-1/6">Donate Now</button>
                   </div>
                 </div>
               </div>

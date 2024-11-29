@@ -31,5 +31,35 @@ document.getElementById('noakhali-submit').addEventListener('click', function (e
     // noakhaliPresentBalanceIs.innerText = balanceAfterDonating.toLocaleString();
 });
 
+document.getElementById('fenni-button').addEventListener('click', function (event){
+    event.preventDefault();
+
+    const fenniInputAmount = getInputValueById('fenni-input');
+    const fenniMainBalance = getTextFieldValueById('main-balance');
+
+    if(isNaN(fenniInputAmount)){
+        alert('Only numbers are allowed!');
+    }
+    else if(fenniInputAmount > fenniMainBalance){
+        alert('Do not have sufficient Balance!');
+    }
+    else if(fenniInputAmount <= 0){
+        alert('Negative or zero value are not allowed');
+    }
+    else{
+        const fenniCurrentBalance = getTextFieldValueById('fenni-balance');
+        const newBalance = fenniInputAmount + fenniCurrentBalance;
+        document.getElementById('fenni-balance').innerText = newBalance.toLocaleString();
+
+        const newMainBalances = fenniMainBalance - fenniInputAmount;
+        document.getElementById('main-balance').innerText = newMainBalances.toLocaleString();
+        
+        document.getElementById('fenni-input').value = '';
+
+        document.getElementById('my_modal_6').showModal();
+
+    }
+})
+
 
 
