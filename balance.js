@@ -23,6 +23,7 @@ document.getElementById('noakhali-submit').addEventListener('click', function (e
     document.getElementById('main-balance').innerText = newmainbalance.toLocaleString();
     document.getElementById('donate-noakhali-input').value = '';
     document.getElementById('my_modal_5').showModal();
+    addToHistory('Noakhali Flood Relief',noakhaliInputAmount);
     }
 
     // const noakhaliInputAmount = getInputValueById('donate-noakhali-input');
@@ -57,9 +58,10 @@ document.getElementById('fenni-button').addEventListener('click', function (even
         document.getElementById('fenni-input').value = '';
 
         document.getElementById('my_modal_6').showModal();
+        addToHistory('Fenni Flood Relief',fenniInputAmount);
 
     }
-})
+});
 
 document.getElementById('med-button').addEventListener('click', function (event){
     event.preventDefault();
@@ -79,20 +81,33 @@ document.getElementById('med-button').addEventListener('click', function (event)
     }
     else {
 
-        const medCurrentBalance = getTextFieldValueById('medicine-balance');
-        const medNewBalance = medCurrentBalance + medinput;
-        document.getElementById('medicine-balance').innerText = medNewBalance.toLocaleString();
+    const medCurrentBalance = getTextFieldValueById('medicine-balance');
+    const medNewBalance = medCurrentBalance + medinput;
+    document.getElementById('medicine-balance').innerText = medNewBalance.toLocaleString();
 
-        const mainaccDecreasedBalance = medmain - medinput;
-        document.getElementById('main-balance').innerText = mainaccDecreasedBalance.toLocaleString();
+    const mainaccDecreasedBalance = medmain - medinput;
+    document.getElementById('main-balance').innerText = mainaccDecreasedBalance.toLocaleString();
 
-        document.getElementById('med-input').value = '';
+    document.getElementById('med-input').value = '';
 
-        document.getElementById('my_modal_7').showModal();
- }
+    document.getElementById('my_modal_7').showModal();
+    addToHistory('medical support',medinput);
+    }
+});
+document.getElementById('d-btn').addEventListener('click', function(){
+    showHiddenSections('d-part');
+});
+document.getElementById('h-btn').addEventListener('click', function(){
+    showHiddenSections('h-section');
+});
+// mobile menue
+document.getElementById('drop-d-btn').addEventListener('click',function(){
+    showHiddenSections('d-part');
+});
 
-
-})
+document.getElementById('drop-h-btn').addEventListener('click', function(){
+    showHiddenSections('h-section');
+});
 
 
 

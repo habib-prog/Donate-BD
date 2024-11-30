@@ -9,3 +9,31 @@ function getTextFieldValueById(id){
     const textFieldNumber = parseFloat(textFieldValue.replace(/,/g,''));
     return textFieldNumber;
 }
+
+function showHiddenSections(id){
+    document.getElementById('h-section').classList.add('hidden');
+    document.getElementById('d-part').classList.add('hidden');
+    document.getElementById(id).classList.remove('hidden');
+}
+
+// History Reusable Function
+function addToHistory(donationType, amount){
+    const historyContainer = document.getElementById('h-container');
+    const historycard = document.createElement('div');
+    historycard.className = "bg-slate-50 shadow-md rounded-lg p-4";
+
+    const donationinfo = document.createElement('p');
+    donationinfo.className = "sm:text-lg sm:font-semibold text-base";
+    donationinfo.textContent = `You donated for ${donationType} ${amount.toLocaleString()} BDT`;
+
+    const timestamp = document.createElement('span');
+    timestamp.className = "text-sm text-gray-500";
+    const now = new Date();
+    timestamp.textContent = `Date: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}`
+
+    historycard.appendChild(donationinfo);
+    historycard.appendChild(timestamp);
+
+    historyContainer.appendChild(historycard);
+
+}
