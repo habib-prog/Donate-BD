@@ -109,5 +109,12 @@ document.getElementById('drop-h-btn').addEventListener('click', function(){
     showHiddenSections('h-section');
 });
 
+document.getElementById('blog-btn').addEventListener('click',function(){
+    showHiddenSections('blog-section');
+});
+document.getElementById('drop-b-btn').addEventListener('click',function(){
+    showHiddenSections('blog-section');
+});
+
 
 

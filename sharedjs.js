@@ -13,6 +13,7 @@ function getTextFieldValueById(id){
 function showHiddenSections(id){
     document.getElementById('h-section').classList.add('hidden');
     document.getElementById('d-part').classList.add('hidden');
+    document.getElementById('blog-section').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
 }
 
