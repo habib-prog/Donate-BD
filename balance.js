@@ -118,3 +118,14 @@ document.getElementById('drop-b-btn').addEventListener('click',function(){
 
 
 
+document.getElementById('d-btn').addEventListener('click', function(){
+    showHiddenSection('d-btn');
+})
+document.getElementById('blog-btn').addEventListener('click',function(){
+    showHiddenSection('blog-btn');
+});
+document.getElementById('h-btn').addEventListener('click', function(){
+    showHiddenSection('h-btn');
+});
+
+

@@ -38,3 +38,9 @@ function addToHistory(donationType, amount){
     historyContainer.appendChild(historycard);
 
 }
+function showHiddenSection(id){
+    document.getElementById('h-btn').classList.remove('bg-green-300', 'hover:bg-green-300');
+    document.getElementById('d-btn').classList.remove('bg-green-300','hover:bg-green-300');
+    document.getElementById('blog-btn').classList.remove('bg-green-300','hover:bg-green-300');
+    document.getElementById(id).classList.add('bg-green-300','hover:bg-green-300');
+}
