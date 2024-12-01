@@ -43,4 +43,5 @@ function showHiddenSection(id){
     document.getElementById('d-btn').classList.remove('bg-green-300','hover:bg-green-300');
     document.getElementById('blog-btn').classList.remove('bg-green-300','hover:bg-green-300');
     document.getElementById(id).classList.add('bg-green-300','hover:bg-green-300');
+    
 }
